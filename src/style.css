@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto Condensed, serif;
+    height: 100vh;
+}
+.container {
+    max-width: 728px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    margin: 15px 0 30px;
+}
+.photos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.photo img {
+    width: 229px;
+    height: 142px;
+    margin-bottom: 30px;
+}
+.comment {
+    display: block;
+    margin: 0 auto;
+    font-size: 23px;
+    color: black;
+}
+.photo-data {
+    width: 530px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.data-left {
+    width: 331px;
+}
+.data-left-img img{
+    width: 331px;
+    height: 205px;
+    margin-bottom: 30px;
+}
+.input-name {
+    width: 320px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 8px 0 7px 11px;
+    border-radius: 3px;
+    outline: none;
+}
+.input-comment {
+    width: 320px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 8px 0 7px 11px;
+    border-radius: 3px;
+    margin: 20px 0 20px;
+    outline: none;
+}
+input::placeholder {
+    font-family: Roboto Condensed, serif;
+    font-size: 13px;
+    line-height: 15px;
+    color: #CCCCCC;
+}
+.data-left-button {
+    background: #4997D0;
+    border-radius: 3px;
+    width: 100%;
+    border: none;
+    padding: 8px 0;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.data-left-button:hover {
+    cursor: pointer;
+}
+.data-comments {
+    width: 185px;
+}
+.photo-comment {
+    font-size: 13px;
+    line-height: 15px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.photo-date {
+    font-size: 13px;
+    line-height: 15px;
+    color: #999999;
+    margin-bottom: 5px;
+}
+.footer {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #CCCCCC;
+    padding: 12px 0;
+    border-top: 1px solid #CCCCCC;
+    position: absolute;
+    bottom: 20px;
+    width: 728px;
+}
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    color: black;
+    padding: 2rem;
+    transition: opacity 0.25s;
+    z-index: 3;
+}
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+.modal-bg.show {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: gray;
+}
+.modal-bg.show {
+    visibility: visible;
+    opacity: 50%;
+    transition: opacity 0.25s;
+}
+.close {
+    height: 0px;
+    display: none;
+}
+.modal-btn {
+    font-size: 35px;
+    color: #000000;
+    padding: 10px 5px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    outline: none;
+    background: transparent;
+    border: none;
+}
+.modal-btn {
+    cursor: pointer;
+}
+@media (max-width:800px) {
+    .photos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .photo {
+        width: 50%;
+        text-align: center;
+    }
+    .footer {
+        position: relative;
+        margin-top: 115px;
+        width: 100%;
+    }
+}
+@media (max-width:680px) {
+    .photo-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 330px;
+    }
+    .data-comments {
+        margin-top: 20px;
+        align-self: start;
+    }
+    .modal-btn{
+        top: 0;
+        right: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:530px) {
+    .photos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .photo {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width:420px) {
+    .modal {
+        width: 100%;
+        height: 100vh;
+        padding: 5px;
+    }
+    .photo-data{
+        padding-top: 50px;
+    }
+}
+@media (max-width:331px) {
+    .data-comments{
+        padding: 0 15px;
+    }
+    .data-left-img img{
+        width: 100%;
+    }
+    .photo-data{
+        padding: 0;
+    }
+    .modal-btn{
+        font-size: 35px;
+    }
+}
